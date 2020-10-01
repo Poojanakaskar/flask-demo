@@ -47,6 +47,10 @@ stages:
     - task: Docker@2
       inputs:
         containerRegistry: 'docker'
+        command: 'login'
+    - task: Docker@2
+      inputs:
+        containerRegistry: 'docker'
         repository: 'poojanakaskar/flaskimage'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
