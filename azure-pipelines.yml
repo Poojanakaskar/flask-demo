@@ -28,12 +28,12 @@ stages:
         dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
         tags: |
           $(tag)
-    # - task: Docker@2
-    #   inputs:
-    #     containerRegistry: 'docker'
-    #     command: 'push'
     - task: Docker@2
       inputs:
         containerRegistry: 'docker'
-        repository: 'poojanakaskar'
+        command: 'login'
+    - task: Docker@2
+      inputs:
+        containerRegistry: 'docker'
+        repository: 'docker'
         command: 'push'
