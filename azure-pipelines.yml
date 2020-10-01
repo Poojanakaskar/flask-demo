@@ -43,4 +43,4 @@ stages:
         repository: 'poojanakaskar/pythonimage'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
-      displayName: 'build and push image
+      displayName: 'build and push image'
