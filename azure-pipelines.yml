@@ -40,7 +40,6 @@ stages:
         Dockerfile: '**/Dockerfile'
     - task: CopyPublishBuildArtifacts@1
       inputs:
-        CopyRoot: '$(Agent.BuildDirectory)'
         Contents: '**'
-        ArtifactName: 'Test'
+        ArtifactName: 'test'
         ArtifactType: 'Container'
