@@ -38,3 +38,9 @@ stages:
         repository: 'poojanakaskar/flaskimage'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
+    - task: CopyPublishBuildArtifacts@1
+      inputs:
+        CopyRoot: '$(Agent.BuildDirectory)'
+        Contents: '**'
+        ArtifactName: 'Test'
+        ArtifactType: 'Container'
